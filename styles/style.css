@@ -54,14 +54,28 @@ h1 {
     margin-left: 40px;
 }
 
+.nav-menu {
+    position: relative;
+}
+
+ul div {
+    margin-left: 0px;
+}
+
 .menu-desplegable {
     display: none;
+    position: absolute;
     height: 100vh;
+    min-width: 130px;
     background-color: var(--orange-web);
-    position: fixed;
-    left: 0;
-    top: 0;
+    left: -5px;
+    top: -5px;
     padding: 1%;
+    z-index: 999;
+}
+
+.nav-menu li {
+    text-align: center;
 }
 
 .menu-desplegable li {
@@ -230,6 +244,10 @@ footer {
     .producto-imagen {
         width: 50%;
     }
+
+    .menu-desplegable {
+        left: -10px;
+    }
     
 }
 
@@ -254,6 +272,10 @@ footer {
     .producto-imagen {
         width: 80%;
     }
+
+    .menu-desplegable {
+        left: -12px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -272,5 +294,20 @@ footer {
     .contenedor-contactos {
         padding: 1%;
     }
+
+    .menu-desplegable {
+        left: -15px;
+    }
+}
     
+@media (min-width: 1500px) {
+    .menu-desplegable {
+        left: -17px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .menu-desplegable {
+        left: -19px;
+    }
 }
