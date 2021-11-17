@@ -65,7 +65,6 @@ ul div {
 .menu-desplegable {
     display: none;
     position: absolute;
-    height: 100vh;
     min-width: 130px;
     background-color: var(--orange-web);
     left: -5px;
