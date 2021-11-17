@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+
+:root {
+    --black: #000000;
+    --oxford-blue: #14213d;
+    --orange-web: #fca311;
+    --platinum: #e5e5e5;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: var(--orange-web);
+    
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+.usuario, .menu {
+    width: 18px;
+}
+
+.menu-desplegable div {
+    display: flex;
+    padding: 1%;
+    font-size: 1.5em;
+    border-bottom: 1.5px solid black;
+}
+
+.menu-desplegable div img {
+    width: 15px;
+    margin-left: 40px;
+}
+
+.menu-desplegable {
+    display: none;
+    height: 100vh;
+    background-color: var(--orange-web);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1%;
+}
+
+.menu-desplegable li {
+    list-style: none;
+    margin: 30px 0 30px 0;
+}
+
+.menu-desplegable li:hover {
+    font-size: 1.2em;
+}
+
+
+.menu-desplegable li a {
+    text-decoration: none;
+    color: black;
+}
+
+.usuario {
+    position: relative;
+}
+
+.menu-usuario {
+    display: none;
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 7px;
+    width: 85px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+.menu-usuario-visible {
+    display: block;
+}
+.menu-usuario a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-usuario a:hover {
+    color: var(--oxford-blue);
+}
+
+.menu-usuario img {
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    z-index: 999;
+}
+
+.avisoEnvios {
+    background-color: var(--black);
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-size: 0.8em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--oxford-blue);
+    margin: 5%;
+}
+
+.producto-imagen {
+    width: 70%;
+}
+
+
+.producto-boton {
+    background-color: var(--oxford-blue);
+    border: none;
+    padding: 7%;
+    border-radius: 4px;
+    margin: 2% 0;
+    font-size: 1em;
+    color: var(--platinum);
+    letter-spacing: 1.5px;
+    cursor: pointer
+}
+
+
+.producto-boton:hover {
+    background-color: var(--black);
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--platinum);
+    position: sticky;
+    top: 100%;
+}
+
+.contenedor-contactos {
+    background-color: var(--oxford-blue);
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+}
+
+.contenedor-contactos h3 {
+    margin: 3% 1%;
+    padding: 2% 0;
+    border-bottom: 1px solid var(--platinum);
+    text-align: center; 
+}
+
+.redes div {
+    text-align: center;
+}
+
+.contacto, .redes {
+    width: 35%;
+}
+
+.boton-contactar {
+    background-color: var(--orange-web);
+    border: 1px solid var(--black);
+    border-radius: 4px;
+    padding: 4%;
+    margin-top: 5%;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: ease-out 0.3s;
+}
+
+.boton-contactar:hover {
+    background-color: var(--platinum);
+    color: var(--black);
+}
+
+.redes img {
+    margin: 0 7px;
+    width: 25px;
+    height: 25px;
+}
+
+.terminos-condiciones ul{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.terminos-condiciones li {
+    list-style: none;
+    padding: 1% 2%;
+}
+
+@media (min-width: 768px) {
+    .usuario, .menu {
+        width: 19px;
+    }
+    .producto-imagen {
+        width: 50%;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    
+    .menu-usuario {
+        font-size: 1em;
+        width: 120px;
+    }
+    
+    .container-productos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .producto {
+        width: 40%;
+    }    
+
+    .producto-imagen {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .usuario, .menu {
+        width: 20px;
+    }
+    
+    h1 {
+        font-size: 3em;
+        font-weight: 900;
+    }
+
+    .producto-imagen {
+        width: 60%;
+    }
+    .contenedor-contactos {
+        padding: 1%;
+    }
+    
+}
